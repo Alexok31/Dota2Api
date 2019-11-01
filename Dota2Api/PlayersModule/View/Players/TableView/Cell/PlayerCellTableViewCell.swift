@@ -1,13 +1,13 @@
 //
-//  PlayerCellCollectionViewCell.swift
+//  PlayerCellTableViewCell.swift
 //  Dota2Api
 //
-//  Created by EVA RUSH on 10/28/19.
+//  Created by EVA RUSH on 11/1/19.
 //
 
 import UIKit
 
-class PlayerCellCollectionViewCell: UICollectionViewCell {
+class PlayerCellTableViewCell: UITableViewCell {
 
     @IBOutlet var playerAvatar: CustomImageView!
     @IBOutlet var playerName: UILabel!
@@ -15,8 +15,9 @@ class PlayerCellCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 10
-        playerAvatar.layer.cornerRadius = playerAvatar.frame.height / 2
+        DispatchQueue.main.async {
+            self.playerAvatar.layer.cornerRadius = self.playerAvatar.frame.height / 2
+        }
     }
     
     var playerViewModel : PlayerCellViewModelType? {
@@ -26,5 +27,4 @@ class PlayerCellCollectionViewCell: UICollectionViewCell {
             playerAvatar.downloadImeg(from: playerViewModel?.avatarImgUrl)
         }
     }
-
 }

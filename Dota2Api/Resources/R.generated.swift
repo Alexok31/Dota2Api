@@ -18,17 +18,17 @@ struct R: Rswift.Validatable {
   
   /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
-    /// Nib `PlayerCellCollectionViewCell`.
-    static let playerCellCollectionViewCell = _R.nib._PlayerCellCollectionViewCell()
+    /// Nib `PlayerCellTableViewCell`.
+    static let playerCellTableViewCell = _R.nib._PlayerCellTableViewCell()
     
-    /// `UINib(name: "PlayerCellCollectionViewCell", in: bundle)`
-    @available(*, deprecated, message: "Use UINib(resource: R.nib.playerCellCollectionViewCell) instead")
-    static func playerCellCollectionViewCell(_: Void = ()) -> UIKit.UINib {
-      return UIKit.UINib(resource: R.nib.playerCellCollectionViewCell)
+    /// `UINib(name: "PlayerCellTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.playerCellTableViewCell) instead")
+    static func playerCellTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.playerCellTableViewCell)
     }
     
-    static func playerCellCollectionViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlayerCellCollectionViewCell? {
-      return R.nib.playerCellCollectionViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlayerCellCollectionViewCell
+    static func playerCellTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlayerCellTableViewCell? {
+      return R.nib.playerCellTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlayerCellTableViewCell
     }
     
     fileprivate init() {}
@@ -36,8 +36,8 @@ struct R: Rswift.Validatable {
   
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
-    /// Reuse identifier `PlayerCellID`.
-    static let playerCellID: Rswift.ReuseIdentifier<PlayerCellCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "PlayerCellID")
+    /// Reuse identifier `playerTableCelId`.
+    static let playerTableCelId: Rswift.ReuseIdentifier<PlayerCellTableViewCell> = Rswift.ReuseIdentifier(identifier: "playerTableCelId")
     
     fileprivate init() {}
   }
@@ -95,15 +95,15 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
-    struct _PlayerCellCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
-      typealias ReusableType = PlayerCellCollectionViewCell
+    struct _PlayerCellTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = PlayerCellTableViewCell
       
       let bundle = R.hostingBundle
-      let identifier = "PlayerCellID"
-      let name = "PlayerCellCollectionViewCell"
+      let identifier = "playerTableCelId"
+      let name = "PlayerCellTableViewCell"
       
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlayerCellCollectionViewCell? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlayerCellCollectionViewCell
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> PlayerCellTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? PlayerCellTableViewCell
       }
       
       fileprivate init() {}
@@ -168,7 +168,6 @@ struct _R: Rswift.Validatable {
       
       static func validate() throws {
         if UIKit.UIImage(named: "person.3", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'person.3' is used in storyboard 'Players', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "plus", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'plus' is used in storyboard 'Players', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
         if _R.storyboard.players().playersID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playersID' could not be loaded from storyboard 'Players' as 'PlayersVC'.") }

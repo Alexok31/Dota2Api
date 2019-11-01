@@ -7,9 +7,10 @@
 
 import Foundation
 
-protocol SearchPlayerCollectionViewModelType {
+protocol PlayerTableViewModelType {
     var numberOfRows : Int {get}
     func profileCell(for indexPath: IndexPath) -> PlayerCellViewModelType
     func selectRow(atIndexPath indexPath: IndexPath)
     func addToFavorite()
+    func removeFromFavorite()
 }

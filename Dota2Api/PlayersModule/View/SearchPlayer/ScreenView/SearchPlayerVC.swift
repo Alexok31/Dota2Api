@@ -9,16 +9,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol StateChange {
+    func updatePlayers()
+}
+
 class SearchPlayerVC: UIViewController {
 
-    @IBOutlet var playerResult: UICollectionView!
+    @IBOutlet var playerResult: UITableView!
     @IBOutlet var selectSerchOptions: UISegmentedControl!
     
     var searchPlayerViewModel : SearchPlayerViewModelType?
-    var searchPlayerCollectionViewModel : SearchPlayerCollectionViewModelType?
+    var searchPlayerTableViewModel : PlayerTableViewModelType?
     
     let bag = DisposeBag()
-    let cellId = R.reuseIdentifier.playerCellID.identifier
+    let cellId = R.reuseIdentifier.playerTableCelId.identifier
+    var stateChangeDelegate : StateChange?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +42,7 @@ class SearchPlayerVC: UIViewController {
     func observeProfilesInfo() {
         _ = searchPlayerViewModel?.observableProfiles.asObservable().subscribe(onNext: {
             profilesInfo in
-            self.searchPlayerCollectionViewModel = SearchPlayerCollectionViewModel(profiles: profilesInfo)
+            self.searchPlayerTableViewModel = PlayerTableViewModel(profiles: profilesInfo)
             DispatchQueue.main.async {
                 self.playerResult.reloadData()
             }
@@ -45,7 +50,13 @@ class SearchPlayerVC: UIViewController {
     }
     
     func cellRegister() {
-        playerResult.register(UINib(resource: R.nib.playerCellCollectionViewCell), forCellWithReuseIdentifier: cellId)
+        playerResult.register(UINib(resource: R.nib.playerCellTableViewCell), forCellReuseIdentifier: cellId)
+    }
+    
+    func dismiss() {
+        dismiss(animated: true) {
+            //self.stateChangeDelegate?.updatePlayers()
+        }
     }
     
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,46 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X2U-Im-xDi">
-                                <rect key="frame" x="0.0" y="91" width="414" height="722"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wsb-0k-mMn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dHX-ra-S0I">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-Q1-P3L">
-                                <rect key="frame" x="367" y="59" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="KyX-kd-MT6"/>
-                                    <constraint firstAttribute="height" constant="22" id="sBD-SB-cka"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="plus" catalog="system"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="fDw-Av-pBX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jis-01-vCA">
+                                            <rect key="frame" x="184" y="7" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="addPlayer:" destination="8gw-B2-ZsQ" eventType="touchUpInside" id="gFi-iE-laI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="jis-01-vCA" firstAttribute="centerX" secondItem="fDw-Av-pBX" secondAttribute="centerX" id="BYH-c7-toD"/>
+                                        <constraint firstItem="jis-01-vCA" firstAttribute="centerY" secondItem="fDw-Av-pBX" secondAttribute="centerY" id="m11-jy-Jgm"/>
+                                    </constraints>
+                                </view>
                                 <connections>
-                                    <action selector="addPlayer:" destination="8gw-B2-ZsQ" eventType="touchUpInside" id="1IP-Me-xWm"/>
+                                    <outlet property="dataSource" destination="8gw-B2-ZsQ" id="pLK-Ol-LMx"/>
+                                    <outlet property="delegate" destination="8gw-B2-ZsQ" id="n52-j3-IhW"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="X2U-Im-xDi" firstAttribute="top" secondItem="LaM-Q1-P3L" secondAttribute="bottom" constant="10" id="6hr-0l-9ia"/>
-                            <constraint firstItem="X2U-Im-xDi" firstAttribute="bottom" secondItem="vFR-BH-td6" secondAttribute="bottom" id="a6l-JI-rA6"/>
-                            <constraint firstItem="X2U-Im-xDi" firstAttribute="leading" secondItem="vFR-BH-td6" secondAttribute="leading" id="o3C-H7-BzQ"/>
-                            <constraint firstItem="X2U-Im-xDi" firstAttribute="trailing" secondItem="vFR-BH-td6" secondAttribute="trailing" id="v8k-Bw-XFQ"/>
-                            <constraint firstItem="vFR-BH-td6" firstAttribute="trailing" secondItem="LaM-Q1-P3L" secondAttribute="trailing" constant="25" id="vXz-fg-osr"/>
-                            <constraint firstItem="LaM-Q1-P3L" firstAttribute="top" secondItem="vFR-BH-td6" secondAttribute="top" constant="15" id="wGI-Vj-xgv"/>
+                            <constraint firstItem="vFR-BH-td6" firstAttribute="bottom" secondItem="Wsb-0k-mMn" secondAttribute="bottom" id="0b0-sr-uwt"/>
+                            <constraint firstItem="Wsb-0k-mMn" firstAttribute="top" secondItem="vFR-BH-td6" secondAttribute="top" id="AGR-SW-GuV"/>
+                            <constraint firstItem="vFR-BH-td6" firstAttribute="trailing" secondItem="Wsb-0k-mMn" secondAttribute="trailing" id="OC4-KA-NOk"/>
+                            <constraint firstItem="Wsb-0k-mMn" firstAttribute="leading" secondItem="vFR-BH-td6" secondAttribute="leading" id="a3K-wl-liJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vFR-BH-td6"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Players" image="person.3" catalog="system" id="jQu-v6-3CO"/>
                     <navigationItem key="navigationItem" title="Players" id="EjI-w2-yTS"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="playerCollection" destination="X2U-Im-xDi" id="KXN-xF-8SO"/>
+                        <outlet property="favoritePlayers" destination="Wsb-0k-mMn" id="1NP-Ez-eop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioL-HM-xAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -83,38 +86,31 @@
                                     <outlet property="delegate" destination="eiW-7R-lF4" id="bcb-sp-uub"/>
                                 </connections>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kKc-AR-Ov0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="61" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fxl-W4-dYP">
                                 <rect key="frame" x="0.0" y="156" width="414" height="740"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="48" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="k5r-AH-dDb">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="eiW-7R-lF4" id="ftN-Mo-3cn"/>
-                                    <outlet property="delegate" destination="eiW-7R-lF4" id="kcK-6X-d4F"/>
+                                    <outlet property="dataSource" destination="eiW-7R-lF4" id="x3x-00-51D"/>
+                                    <outlet property="delegate" destination="eiW-7R-lF4" id="MNW-dN-AQ0"/>
                                 </connections>
-                            </collectionView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="kKc-AR-Ov0" secondAttribute="bottom" id="91y-ZK-C9m"/>
-                            <constraint firstItem="kKc-AR-Ov0" firstAttribute="leading" secondItem="YFf-J2-8hZ" secondAttribute="leading" id="Cn5-bP-m29"/>
+                            <constraint firstAttribute="bottom" secondItem="fxl-W4-dYP" secondAttribute="bottom" id="AGt-1j-Vuk"/>
                             <constraint firstItem="YFf-J2-8hZ" firstAttribute="trailing" secondItem="QDW-8m-DZn" secondAttribute="trailing" constant="24" id="Uup-B4-p95"/>
                             <constraint firstItem="QDW-8m-DZn" firstAttribute="top" secondItem="2Dv-tj-oEx" secondAttribute="bottom" constant="10" id="f2Z-w6-pxg"/>
+                            <constraint firstItem="fxl-W4-dYP" firstAttribute="top" secondItem="QDW-8m-DZn" secondAttribute="bottom" id="gyS-z9-P1G"/>
                             <constraint firstItem="QDW-8m-DZn" firstAttribute="centerX" secondItem="YFf-J2-8hZ" secondAttribute="centerX" id="iOs-KC-QJQ"/>
-                            <constraint firstItem="kKc-AR-Ov0" firstAttribute="top" secondItem="QDW-8m-DZn" secondAttribute="bottom" id="kBr-HZ-8ZB"/>
+                            <constraint firstItem="fxl-W4-dYP" firstAttribute="trailing" secondItem="YFf-J2-8hZ" secondAttribute="trailing" id="kpm-ZM-ihW"/>
                             <constraint firstItem="2Dv-tj-oEx" firstAttribute="top" secondItem="YFf-J2-8hZ" secondAttribute="top" constant="15" id="kt8-6o-NaF"/>
-                            <constraint firstItem="YFf-J2-8hZ" firstAttribute="trailing" secondItem="kKc-AR-Ov0" secondAttribute="trailing" id="nPt-gA-5wQ"/>
+                            <constraint firstItem="fxl-W4-dYP" firstAttribute="leading" secondItem="YFf-J2-8hZ" secondAttribute="leading" id="soD-Zv-f6b"/>
                             <constraint firstItem="2Dv-tj-oEx" firstAttribute="centerX" secondItem="YFf-J2-8hZ" secondAttribute="centerX" id="tid-Sy-Zj0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YFf-J2-8hZ"/>
                     </view>
                     <connections>
-                        <outlet property="playerResult" destination="kKc-AR-Ov0" id="mAS-ta-yhn"/>
+                        <outlet property="playerResult" destination="fxl-W4-dYP" id="XAc-Ff-lxq"/>
                         <outlet property="selectSerchOptions" destination="2Dv-tj-oEx" id="erh-Vn-IiL"/>
                     </connections>
                 </viewController>
@@ -125,6 +121,5 @@
     </scenes>
     <resources>
         <image name="person.3" catalog="system" width="72" height="35"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>

@@ -10,5 +10,6 @@ import RealmSwift
 
 protocol DataBaseServise {
     func add<ModelType: Object>(dataModel: ModelType)
-    func fetch<ModelType: Object>(modelType: ModelType.Type) -> ModelType?
+    func remove<ModelType: Object>(dataModel: ModelType)
+    func fetch<ModelType: Object>(modelType: ModelType.Type) -> [ModelType]
 }

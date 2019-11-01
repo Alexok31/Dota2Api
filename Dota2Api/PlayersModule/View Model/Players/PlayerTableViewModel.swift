@@ -7,15 +7,15 @@
 
 import Foundation
 
-class SearchPlayerCollectionViewModel: SearchPlayerCollectionViewModelType {
+class PlayerTableViewModel: PlayerTableViewModelType {
     
     private var profiles : [ProfileModel]
     private var selectedIndexPath: IndexPath?
     
     var dataBaseServise : DataBaseServise?
     
-    init(profiles : [ProfileModel]) {
-        self.profiles = profiles
+    init(profiles : [ProfileModel]?) {
+        self.profiles = profiles ?? [ProfileModel]()
         dataBaseServise = RealmDataBaseServise()
     }
     
@@ -36,6 +36,12 @@ class SearchPlayerCollectionViewModel: SearchPlayerCollectionViewModelType {
         guard let index = selectedIndexPath else {return}
         let profile = profiles[index.row]
         dataBaseServise?.add(dataModel: profile)
+    }
+    
+    func removeFromFavorite() {
+        guard let index = selectedIndexPath else {return}
+        let profile = profiles[index.row]
+        dataBaseServise?.remove(dataModel: profile)
     }
     
 }
