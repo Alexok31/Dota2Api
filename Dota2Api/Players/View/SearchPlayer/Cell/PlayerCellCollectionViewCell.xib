@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlayerCellID" id="gTV-IL-0wX" customClass="PlayerCellCollectionViewCell" customModule="Dota2Api" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b21-fh-G5u">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="89"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFg-cO-ryl">
+                                <rect key="frame" x="94" y="15" width="196" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVE-nq-9b0" customClass="CustomImageView" customModule="Dota2Api" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="79" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BVE-nq-9b0" secondAttribute="height" id="4gE-vN-Bhr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Id" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ox-Az-LWc">
+                                <rect key="frame" x="94" y="51" width="196" height="21"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2ox-Az-LWc" firstAttribute="leading" secondItem="DFg-cO-ryl" secondAttribute="leading" id="9c9-b0-udR"/>
+                            <constraint firstItem="DFg-cO-ryl" firstAttribute="leading" secondItem="BVE-nq-9b0" secondAttribute="trailing" constant="10" id="Iue-2p-Tjb"/>
+                            <constraint firstItem="DFg-cO-ryl" firstAttribute="top" secondItem="BVE-nq-9b0" secondAttribute="top" constant="10" id="KRI-7e-KRA"/>
+                            <constraint firstItem="2ox-Az-LWc" firstAttribute="trailing" secondItem="DFg-cO-ryl" secondAttribute="trailing" id="Rmc-Lw-kaq"/>
+                            <constraint firstItem="BVE-nq-9b0" firstAttribute="centerY" secondItem="b21-fh-G5u" secondAttribute="centerY" id="Tpg-jR-rdP"/>
+                            <constraint firstItem="2ox-Az-LWc" firstAttribute="top" secondItem="DFg-cO-ryl" secondAttribute="bottom" constant="15" id="cyP-Hv-ktz"/>
+                            <constraint firstItem="BVE-nq-9b0" firstAttribute="top" secondItem="b21-fh-G5u" secondAttribute="top" constant="5" id="eGU-GJ-GZe"/>
+                            <constraint firstAttribute="trailing" secondItem="DFg-cO-ryl" secondAttribute="trailing" constant="10" id="hle-w0-nCy"/>
+                            <constraint firstItem="BVE-nq-9b0" firstAttribute="leading" secondItem="b21-fh-G5u" secondAttribute="leading" constant="5" id="x9y-uv-Bji"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="b21-fh-G5u" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="6SH-dz-KIK"/>
+                <constraint firstAttribute="trailing" secondItem="b21-fh-G5u" secondAttribute="trailing" id="HH8-dB-y6s"/>
+                <constraint firstItem="b21-fh-G5u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Ms8-3Y-Vbe"/>
+                <constraint firstAttribute="bottom" secondItem="b21-fh-G5u" secondAttribute="bottom" id="Tli-Li-HXi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="300" height="89"/>
+            <connections>
+                <outlet property="playerAvatar" destination="BVE-nq-9b0" id="8gt-7C-qDe"/>
+                <outlet property="playerID" destination="2ox-Az-LWc" id="cin-SV-C5N"/>
+                <outlet property="playerName" destination="DFg-cO-ryl" id="Dvq-30-zOz"/>
+            </connections>
+            <point key="canvasLocation" x="49.275362318840585" y="147.65625"/>
+        </collectionViewCell>
+    </objects>
+</document>
