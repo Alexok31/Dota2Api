@@ -6,10 +6,10 @@ target 'Dota2Api' do
   use_frameworks!
 
   # Pods for Dota2Api
-  pod 'Alamofire', '~> 5.0.0-rc.2'
+  pod 'Alamofire', '~> 5.0.0-rc.3'
   
-  pod 'RxSwift', '~> 5'
-  pod 'RxCocoa', '~> 5'
+  pod 'RxSwift', '~> 5.0.0'
+  pod 'RxCocoa', '~> 5.0.0'
 
   pod 'R.swift', '~> 5.0.0'
   pod 'KeychainSwift', '~> 13.0.0'

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PlayersVC: UIViewController {
     
@@ -14,37 +15,55 @@ class PlayersVC: UIViewController {
     var playersViewModel : PlayersViewModelType?
     var playerTableViewModel : PlayerTableViewModelType?
     
+    var notificationToken: NotificationToken? = nil
     let cellId = R.reuseIdentifier.playerTableCelId.identifier
 
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegister()
         setViewModels()
+        observeProfiles()
     }
     
     func cellRegister() {
         favoritePlayers.register(UINib(resource: R.nib.playerCellTableViewCell), forCellReuseIdentifier: cellId)
     }
     
+    func observeProfiles() {
+        notificationToken = playersViewModel?.profiles.observe({ (changes) in
+            switch changes {
+            case .initial:
+                self.setViewModels()
+                self.favoritePlayers.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                self.favoritePlayers.beginUpdates()
+                self.setViewModels()
+                self.favoritePlayers.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                                     with: .automatic)
+                self.favoritePlayers.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                                     with: .automatic)
+                self.favoritePlayers.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                                     with: .automatic)
+                self.favoritePlayers.endUpdates()
+            case .error(let error):
+                fatalError("\(error)")
+            }
+        })
+    }
+    
     func setViewModels() {
         playersViewModel = PlayersViewModel()
-        playerTableViewModel = PlayerTableViewModel(profiles: playersViewModel?.profiles)
-        DispatchQueue.main.async {
-            self.favoritePlayers.reloadData()
-        }
+        guard let playersViewModel = playersViewModel else {return}
+        let profoles = Array(playersViewModel.profiles)
+        playerTableViewModel = PlayerTableViewModel(profiles: profoles)
     }
 
     @IBAction func addPlayer(_ sender: Any) {
         guard let addPlayerVc = R.storyboard.players.searchPlayerID() else {return}
-        addPlayerVc.stateChangeDelegate = self
         present(addPlayerVc, animated: true, completion: nil)
     }
-}
-
-extension PlayersVC : StateChange {
     
-    func updatePlayers() {
-        setViewModels()
+    deinit {
+        notificationToken?.invalidate()
     }
 }
-

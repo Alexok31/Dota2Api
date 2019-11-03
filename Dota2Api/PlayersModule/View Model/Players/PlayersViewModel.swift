@@ -12,10 +12,10 @@ class PlayersViewModel: PlayersViewModelType {
     
     private var dataBaseServise : DataBaseServise?
     
-    var profiles: [ProfileModel]
+    var profiles: Results<ProfileModel>
     
     init() {
         dataBaseServise = RealmDataBaseServise()
-        profiles = dataBaseServise?.fetch(modelType: ProfileModel.self) ?? [ProfileModel]()
+        profiles = (dataBaseServise?.fetch(modelType: ProfileModel.self))!
     }
 }

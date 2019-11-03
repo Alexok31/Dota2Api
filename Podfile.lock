@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0-rc.2)
+  - Alamofire (5.0.0-rc.3)
   - KeychainSwift (13.0.0)
   - R.swift (5.0.3):
     - R.swift.Library (~> 5.0.0)
@@ -17,16 +17,15 @@ PODS:
   - RxSwift (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 5.0.0-rc.2)
+  - Alamofire (~> 5.0.0-rc.3)
   - KeychainSwift (~> 13.0.0)
   - R.swift (~> 5.0.0)
   - RealmSwift (~> 3.18.0)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
+  - RxCocoa (~> 5.0.0)
+  - RxSwift (~> 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
+  https://github.com/CocoaPods/Specs.git:
     - KeychainSwift
     - R.swift
     - R.swift.Library
@@ -35,9 +34,11 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+  trunk:
+    - Alamofire
 
 SPEC CHECKSUMS:
-  Alamofire: f9450d3c7f6bea2ad62e7a541c3e9b186c7991d6
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
   KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
   R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
@@ -47,6 +48,6 @@ SPEC CHECKSUMS:
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
-PODFILE CHECKSUM: b452131a62d3ef470aec83b0d59d87824e226d73
+PODFILE CHECKSUM: 47dc8da39402de8da37edb1853cfe0e9ae2c6d29
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

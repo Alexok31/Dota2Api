@@ -25,8 +25,8 @@ class RealmDataBaseServise: DataBaseServise {
         }
     }
     
-    func fetch<ModelType: Object>(modelType: ModelType.Type) -> [ModelType] {
+    func fetch<ModelType: Object>(modelType: ModelType.Type) -> Results<ModelType> {
         let dataInfo = realm.objects(modelType)
-        return Array(dataInfo)
+        return dataInfo
     }
 }

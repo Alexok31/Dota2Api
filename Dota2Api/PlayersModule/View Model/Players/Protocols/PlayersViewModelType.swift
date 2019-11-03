@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol PlayersViewModelType {
-    var profiles: [ProfileModel] {get}
+    var profiles: Results<ProfileModel> {get}
 }

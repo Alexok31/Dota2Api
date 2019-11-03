@@ -9,9 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol StateChange {
-    func updatePlayers()
-}
 
 class SearchPlayerVC: UIViewController {
 
@@ -23,7 +20,6 @@ class SearchPlayerVC: UIViewController {
     
     let bag = DisposeBag()
     let cellId = R.reuseIdentifier.playerTableCelId.identifier
-    var stateChangeDelegate : StateChange?
     
     override func viewDidLoad() {
         super.viewDidLoad()

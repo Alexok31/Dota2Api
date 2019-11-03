@@ -5,7 +5,6 @@
 //  Created by EVA RUSH on 10/28/19.
 //
 
-
 struct PlayerInfo: Decodable {
     let trackedUntil: String?
     let rankTier, soloCompetitiveRank, competitiveRank: Int?
