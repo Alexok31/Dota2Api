@@ -42,7 +42,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
@@ -50,8 +50,6 @@ struct R: Rswift.Validatable {
     static let matches = _R.storyboard.matches()
     /// Storyboard `Players`.
     static let players = _R.storyboard.players()
-    /// Storyboard `TabBar`.
-    static let tabBar = _R.storyboard.tabBar()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -66,11 +64,6 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Players", bundle: ...)`
     static func players(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.players)
-    }
-    
-    /// `UIStoryboard(name: "TabBar", bundle: ...)`
-    static func tabBar(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.tabBar)
     }
     
     fileprivate init() {}
@@ -117,7 +110,6 @@ struct _R: Rswift.Validatable {
       try launchScreen.validate()
       try matches.validate()
       try players.validate()
-      try tabBar.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -152,7 +144,9 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct players: Rswift.StoryboardResourceType, Rswift.Validatable {
+    struct players: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = PlayersVC
+      
       let bundle = R.hostingBundle
       let name = "Players"
       let playersID = StoryboardViewControllerResource<PlayersVC>(identifier: "PlayersID")
@@ -172,20 +166,6 @@ struct _R: Rswift.Validatable {
         }
         if _R.storyboard.players().playersID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playersID' could not be loaded from storyboard 'Players' as 'PlayersVC'.") }
         if _R.storyboard.players().searchPlayerID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'searchPlayerID' could not be loaded from storyboard 'Players' as 'SearchPlayerVC'.") }
-      }
-      
-      fileprivate init() {}
-    }
-    
-    struct tabBar: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = UIKit.UINavigationController
-      
-      let bundle = R.hostingBundle
-      let name = "TabBar"
-      
-      static func validate() throws {
-        if #available(iOS 11.0, *) {
-        }
       }
       
       fileprivate init() {}

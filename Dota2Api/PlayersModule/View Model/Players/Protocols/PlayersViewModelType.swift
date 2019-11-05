@@ -7,7 +7,9 @@
 
 import Foundation
 import RealmSwift
+import RxSwift
 
 protocol PlayersViewModelType {
     var profiles: Results<ProfileModel> {get}
+    var didAddFavorite : PublishSubject<Void> {get}
 }

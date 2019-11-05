@@ -23,10 +23,10 @@ extension SearchPlayerVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         searchPlayerTableViewModel?.selectRow(atIndexPath: indexPath)
         searchPlayerTableViewModel?.addToFavorite()
-        dismiss()
+        dismiss(animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 70
     }
 }

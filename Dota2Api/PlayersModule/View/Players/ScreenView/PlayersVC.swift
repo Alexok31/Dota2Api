@@ -6,27 +6,39 @@
 //
 
 import UIKit
+import RxSwift
 import RealmSwift
+
 
 class PlayersVC: UIViewController {
     
+    @IBOutlet var addFavoriteButton: UIButton!
     @IBOutlet var favoritePlayers: UITableView!
     
     var playersViewModel : PlayersViewModelType?
     var playerTableViewModel : PlayerTableViewModelType?
     
     var notificationToken: NotificationToken? = nil
+    var disposeBag = DisposeBag()
     let cellId = R.reuseIdentifier.playerTableCelId.identifier
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cellRegister()
-        setViewModels()
+        addFavoriteTapped()
         observeProfiles()
     }
     
     func cellRegister() {
         favoritePlayers.register(UINib(resource: R.nib.playerCellTableViewCell), forCellReuseIdentifier: cellId)
+    }
+    
+    func addFavoriteTapped() {
+        _ = addFavoriteButton.rx.tap
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {
+                self.playersViewModel?.didAddFavorite.onNext(())
+            }).disposed(by: disposeBag)
     }
     
     func observeProfiles() {
@@ -35,14 +47,12 @@ class PlayersVC: UIViewController {
             case .initial:
                 self.setViewModels()
                 self.favoritePlayers.reloadData()
-            case .update(_, let deletions, let insertions, let modifications):
+            case .update(_, let deletions, let insertions, _):
                 self.favoritePlayers.beginUpdates()
                 self.setViewModels()
                 self.favoritePlayers.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
                                      with: .automatic)
                 self.favoritePlayers.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
-                                     with: .automatic)
-                self.favoritePlayers.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
                                      with: .automatic)
                 self.favoritePlayers.endUpdates()
             case .error(let error):
@@ -52,15 +62,9 @@ class PlayersVC: UIViewController {
     }
     
     func setViewModels() {
-        playersViewModel = PlayersViewModel()
         guard let playersViewModel = playersViewModel else {return}
         let profoles = Array(playersViewModel.profiles)
         playerTableViewModel = PlayerTableViewModel(profiles: profoles)
-    }
-
-    @IBAction func addPlayer(_ sender: Any) {
-        guard let addPlayerVc = R.storyboard.players.searchPlayerID() else {return}
-        present(addPlayerVc, animated: true, completion: nil)
     }
     
     deinit {

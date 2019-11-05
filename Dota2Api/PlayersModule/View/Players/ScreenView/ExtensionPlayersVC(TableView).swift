@@ -30,7 +30,6 @@ extension PlayersVC : UITableViewDelegate, UITableViewDataSource  {
         switch editingStyle {
         case .delete:
             playerTableViewModel?.removeFromFavorite()
-           // updatePlayers()
         default:
             break
         }

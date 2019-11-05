@@ -22,8 +22,8 @@ class SearchPlayerViewModel: SearchPlayerViewModelType {
         case id
     }
     
-    init() {
-        playerServise = AlamofirePlayerServise()
+    init(playerServise: PlayerApiServise) {
+        self.playerServise = playerServise
         selectSegmentIndex = .name
         observableProfiles = BehaviorRelay(value: searchPlayer)
     }

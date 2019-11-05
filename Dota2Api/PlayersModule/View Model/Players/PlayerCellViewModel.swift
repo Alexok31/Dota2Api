@@ -26,7 +26,4 @@ class PlayerCellViewModel : PlayerCellViewModelType {
     var avatarImgUrl: String {
         return searchPlayerModel.avatarfull ?? ""
     }
-    
-    
-    
 }

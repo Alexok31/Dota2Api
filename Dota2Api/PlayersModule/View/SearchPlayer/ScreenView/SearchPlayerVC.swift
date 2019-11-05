@@ -23,7 +23,6 @@ class SearchPlayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchPlayerViewModel = SearchPlayerViewModel()
         cellRegister()
         observeSelectSerchOptions()
         observeProfilesInfo()
@@ -48,13 +47,6 @@ class SearchPlayerVC: UIViewController {
     func cellRegister() {
         playerResult.register(UINib(resource: R.nib.playerCellTableViewCell), forCellReuseIdentifier: cellId)
     }
-    
-    func dismiss() {
-        dismiss(animated: true) {
-            //self.stateChangeDelegate?.updatePlayers()
-        }
-    }
-    
 }
 
 
