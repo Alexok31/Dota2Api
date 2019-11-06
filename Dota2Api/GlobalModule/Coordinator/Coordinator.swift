@@ -9,7 +9,6 @@ import UIKit
 
 protocol Coordinator {
     func start()
-    func stop()
 }
 
 protocol DefaultCoordinator: Coordinator {
@@ -18,7 +17,5 @@ protocol DefaultCoordinator: Coordinator {
 }
 
 extension Coordinator {
-    func stop() {
     
-    }
 }
