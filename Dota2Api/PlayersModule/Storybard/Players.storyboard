@@ -11,7 +11,7 @@
         <!--Players-->
         <scene sceneID="A3p-Gk-FKi">
             <objects>
-                <viewController storyboardIdentifier="PlayersID" id="8gw-B2-ZsQ" customClass="PlayersVC" customModule="Dota2Api" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayersID" id="8gw-B2-ZsQ" customClass="FavoritePlayersVC" customModule="Dota2Api" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ldz-8w-XUr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,10 +92,15 @@
                                     <outlet property="delegate" destination="eiW-7R-lF4" id="MNW-dN-AQ0"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-bP-PwJ">
+                                <rect key="frame" x="20" y="59.5" width="30" height="30"/>
+                                <state key="normal" title="X"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="fxl-W4-dYP" secondAttribute="bottom" id="AGt-1j-Vuk"/>
+                            <constraint firstItem="TOO-bP-PwJ" firstAttribute="leading" secondItem="YFf-J2-8hZ" secondAttribute="leading" constant="20" id="DyQ-wX-ZBM"/>
                             <constraint firstItem="YFf-J2-8hZ" firstAttribute="trailing" secondItem="QDW-8m-DZn" secondAttribute="trailing" constant="24" id="Uup-B4-p95"/>
                             <constraint firstItem="QDW-8m-DZn" firstAttribute="top" secondItem="2Dv-tj-oEx" secondAttribute="bottom" constant="10" id="f2Z-w6-pxg"/>
                             <constraint firstItem="fxl-W4-dYP" firstAttribute="top" secondItem="QDW-8m-DZn" secondAttribute="bottom" id="gyS-z9-P1G"/>
@@ -104,10 +109,12 @@
                             <constraint firstItem="2Dv-tj-oEx" firstAttribute="top" secondItem="YFf-J2-8hZ" secondAttribute="top" constant="15" id="kt8-6o-NaF"/>
                             <constraint firstItem="fxl-W4-dYP" firstAttribute="leading" secondItem="YFf-J2-8hZ" secondAttribute="leading" id="soD-Zv-f6b"/>
                             <constraint firstItem="2Dv-tj-oEx" firstAttribute="centerX" secondItem="YFf-J2-8hZ" secondAttribute="centerX" id="tid-Sy-Zj0"/>
+                            <constraint firstItem="TOO-bP-PwJ" firstAttribute="centerY" secondItem="2Dv-tj-oEx" secondAttribute="centerY" id="xy6-gJ-TrN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YFf-J2-8hZ"/>
                     </view>
                     <connections>
+                        <outlet property="closeSearchButton" destination="TOO-bP-PwJ" id="KjJ-eL-d4v"/>
                         <outlet property="playerResult" destination="fxl-W4-dYP" id="XAc-Ff-lxq"/>
                         <outlet property="selectSerchOptions" destination="2Dv-tj-oEx" id="erh-Vn-IiL"/>
                     </connections>
@@ -115,6 +122,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ga3-Wv-49f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802.8985507246377" y="-231.02678571428569"/>
+        </scene>
+        <!--Player DetailsVC-->
+        <scene sceneID="rgk-8Y-Llg">
+            <objects>
+                <viewController storyboardIdentifier="PlayerDetailsID" id="jQv-7b-Q2k" customClass="PlayerDetailsVC" customModule="Dota2Api" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sw3-IY-QE4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bJH-vz-fFU"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6T5-KS-hKW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="-231"/>
         </scene>
     </scenes>
     <resources>

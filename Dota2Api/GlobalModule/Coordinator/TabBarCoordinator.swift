@@ -19,7 +19,7 @@ class TabBarCoordinator : Coordinator {
     }
     
     func start() {
-        let profileCoordinator = ProfileCoordinator()
+        let profileCoordinator = FavoritePlayersCoordinator()
         profileCoordinator.start()
         
         tabBarController.setViewControllers([profileCoordinator.navigationController], animated: false)

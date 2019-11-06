@@ -145,14 +145,19 @@ struct _R: Rswift.Validatable {
     }
     
     struct players: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = PlayersVC
+      typealias InitialController = FavoritePlayersVC
       
       let bundle = R.hostingBundle
       let name = "Players"
-      let playersID = StoryboardViewControllerResource<PlayersVC>(identifier: "PlayersID")
+      let playerDetailsID = StoryboardViewControllerResource<PlayerDetailsVC>(identifier: "PlayerDetailsID")
+      let playersID = StoryboardViewControllerResource<FavoritePlayersVC>(identifier: "PlayersID")
       let searchPlayerID = StoryboardViewControllerResource<SearchPlayerVC>(identifier: "SearchPlayerID")
       
-      func playersID(_: Void = ()) -> PlayersVC? {
+      func playerDetailsID(_: Void = ()) -> PlayerDetailsVC? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: playerDetailsID)
+      }
+      
+      func playersID(_: Void = ()) -> FavoritePlayersVC? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: playersID)
       }
       
@@ -164,7 +169,8 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "person.3", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'person.3' is used in storyboard 'Players', but couldn't be loaded.") }
         if #available(iOS 11.0, *) {
         }
-        if _R.storyboard.players().playersID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playersID' could not be loaded from storyboard 'Players' as 'PlayersVC'.") }
+        if _R.storyboard.players().playerDetailsID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playerDetailsID' could not be loaded from storyboard 'Players' as 'PlayerDetailsVC'.") }
+        if _R.storyboard.players().playersID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'playersID' could not be loaded from storyboard 'Players' as 'FavoritePlayersVC'.") }
         if _R.storyboard.players().searchPlayerID() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'searchPlayerID' could not be loaded from storyboard 'Players' as 'SearchPlayerVC'.") }
       }
       
