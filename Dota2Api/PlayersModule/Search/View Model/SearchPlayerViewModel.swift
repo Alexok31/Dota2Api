@@ -17,6 +17,9 @@ class SearchPlayerViewModel: SearchPlayerViewModelType {
     
     var observableProfiles: BehaviorRelay<[ProfileModel]>
     
+    //event
+    var didClouseSearch = PublishSubject<Void>()
+    
     enum SearchByType: Int {
         case name = 0
         case id
