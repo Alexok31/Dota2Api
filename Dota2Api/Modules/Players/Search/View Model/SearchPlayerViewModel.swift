@@ -11,7 +11,8 @@ import RxCocoa
 
 class SearchPlayerViewModel: SearchPlayerViewModelType {
     
-    private let playerServise : PlayerApiServise
+    private let searchPlayerServise : SearchPlayerApiServise
+    private let playerDetails: PlayerDetailsApiServise
     private var searchPlayer = [ProfileModel]()
     private var selectSegmentIndex : SearchByType
     
@@ -25,8 +26,9 @@ class SearchPlayerViewModel: SearchPlayerViewModelType {
         case id
     }
     
-    init(playerServise: PlayerApiServise) {
-        self.playerServise = playerServise
+    init(searchPlayerServise: SearchPlayerApiServise, playerDetails: PlayerDetailsApiServise) {
+        self.searchPlayerServise = searchPlayerServise
+        self.playerDetails = playerDetails
         selectSegmentIndex = .name
         observableProfiles = BehaviorRelay(value: searchPlayer)
     }
@@ -36,20 +38,28 @@ class SearchPlayerViewModel: SearchPlayerViewModelType {
         self.selectSegmentIndex = searchByType
     }
     
+    private func searchPlayerByUserName(name: String) {
+        searchPlayerServise.byUserName(name) { (result, profile) in
+            if let profile = profile {
+                self.observableProfiles.accept(profile)
+            }
+        }
+    }
+    
+    private func searchPlayerByID(id: String) {
+        playerDetails.getInfo(path: .getPlayer(id: id), modelType: PlayerInfo.self) { (result, profile) in
+            if let profile = profile?.profile {
+                self.observableProfiles.accept([profile])
+            }
+        }
+    }
+    
     func getPlayersInfo(searchText: String) {
         switch selectSegmentIndex {
         case .name:
-            playerServise.searchUserName(userName: searchText) { (result, profile) in
-                if let profile = profile {
-                    self.observableProfiles.accept(profile)
-                }
-            }
+            searchPlayerByUserName(name: searchText)
         case .id:
-            playerServise.getPlayer(byID: searchText) { (result, playerInfo) in
-                if let profile = playerInfo?.profile {
-                    self.observableProfiles.accept([profile])
-                }
-            }
+            searchPlayerByID(id: searchText)
         }
     }
 }

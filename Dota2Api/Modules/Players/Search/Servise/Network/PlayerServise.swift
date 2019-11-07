@@ -6,8 +6,8 @@
 //
 
 import Foundation
+import Alamofire
 
-protocol PlayerApiServise {
-    func searchUserName(userName: String, closure: @escaping (_ result: ResultsCode, _ players: [ProfileModel]?) -> ())
-    func getPlayer(byID id: String, closure: @escaping (_ result: ResultsCode, _ players: PlayerInfo?) -> ())
+protocol SearchPlayerApiServise {
+    func byUserName(_ name: String, completion: @escaping (_ result: ResultsCode, _ players: [ProfileModel]?) -> ())
 }

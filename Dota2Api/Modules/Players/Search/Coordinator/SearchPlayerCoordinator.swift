@@ -14,11 +14,15 @@ class SearchPlayerCoordinator: DefaultCoordinator {
     weak var viewController: UIViewController?
     var viewModel: SearchPlayerViewModelType
     
+    //Network Servises
+    let searchPlayerServise = AlamofireSearchPlayerServise()
+    let playerDetailsServise = AlamofirePlayerDetailsServise()
+    
     var disposeBag = DisposeBag()
     
     init(navigationController : UINavigationController) {
         self.navigationController = navigationController
-        viewModel = SearchPlayerViewModel(playerServise: AlamofirePlayerServise())
+        viewModel = SearchPlayerViewModel(searchPlayerServise: searchPlayerServise, playerDetails: playerDetailsServise)
     }
     
     func start() {

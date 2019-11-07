@@ -15,7 +15,3 @@ protocol DefaultCoordinator: Coordinator {
     var navigationController: UINavigationController { get set }
     var viewController : UIViewController? { get set }
 }
-
-extension Coordinator {
-    
-}

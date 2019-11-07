@@ -17,11 +17,11 @@ class NetworkHelper {
         return NetworkReachabilityManager()?.isReachable ?? false
     }
     
-    func checkInternet(closure: @escaping (_ result: ResultsCode) -> ()) {
+    func checkInternet(completion: @escaping (_ result: ResultsCode) -> ()) {
         if !isConnectedToInternet {
-            closure(ResultsCode.noInternetConnection)
+            completion(ResultsCode.noInternetConnection)
         } else {
-            closure(ResultsCode.serviceNotResponding)
+            completion(ResultsCode.serviceNotResponding)
         }
     }
     

@@ -17,7 +17,7 @@ struct AlamofireRequestModal {
 typealias complitionResult<DataModel: Decodable> = (_ result: ResultsCode, _ dataModel: DataModel?) -> ()
 
 class AlamofireBaseRequestService: BaseRequestService {
-    
+   
     func callWebServiceAlamofire(_ alamoReq: AlamofireRequestModal, success: @escaping ((_ responseData: Data) -> Void), failureCode: @escaping ((_ code: ResultsCode) -> Void)) {
         
         let request = AF.request(alamoReq.path, method: alamoReq.method, parameters: alamoReq.parameters)
@@ -34,7 +34,7 @@ class AlamofireBaseRequestService: BaseRequestService {
                     failureCode(ResultsCode.serviceNotResponding)
                 }
             case .failure(_):
-                NetworkHelper.shared.checkInternet(closure: { (result) in
+                NetworkHelper.shared.checkInternet(completion: { (result) in
                     failureCode(result)
                 })
             }
@@ -42,7 +42,7 @@ class AlamofireBaseRequestService: BaseRequestService {
         })
     }
     
-    func getDataModel<DataModel: Decodable>(_ request: AlamofirePlayerServise.Path, model: DataModel.Type, complition: @escaping complitionResult<DataModel>) {
+    func getDataModel<DataModel>(_ request: BaseParameterPatch, model: DataModel.Type, complition: @escaping (ResultsCode, DataModel?) -> ()) where DataModel : Decodable {
         
         let requestProperties = AlamofireRequestModal(method: request.method, path: request.path, parameters: request.parameters)
         self.callWebServiceAlamofire(requestProperties, success: { (data) in

@@ -10,13 +10,24 @@
 		8A03734A2367084F00330540 /* AlamofireBaseRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0373492367084F00330540 /* AlamofireBaseRequestService.swift */; };
 		8A03734C2367099400330540 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03734B2367099400330540 /* NetworkHelper.swift */; };
 		8A03734E23671F5700330540 /* DotaApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03734D23671F5700330540 /* DotaApiPath.swift */; };
-		8A0373522367202800330540 /* AlamofirePlayerServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0373512367202800330540 /* AlamofirePlayerServise.swift */; };
+		8A0373522367202800330540 /* AlamofireSearchPlayerServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0373512367202800330540 /* AlamofireSearchPlayerServise.swift */; };
 		8A0373552367215000330540 /* BaseRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0373542367215000330540 /* BaseRequestService.swift */; };
 		8A037357236728C600330540 /* PlayerInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A037356236728C600330540 /* PlayerInfoModel.swift */; };
 		8A03735923672AFA00330540 /* PlayerServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03735823672AFA00330540 /* PlayerServise.swift */; };
 		8A03735D236826F700330540 /* PlayerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03735C236826F700330540 /* PlayerCellViewModel.swift */; };
 		8A03736023683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03735F23683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift */; };
 		8A03736223683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03736123683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift */; };
+		8A25D8CB2374265E0092063B /* RankingsHeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */; };
+		8A25D8CD237426DB0092063B /* WordCloudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CC237426DB0092063B /* WordCloudModel.swift */; };
+		8A25D8CF237427740092063B /* CountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CE237427740092063B /* CountsModel.swift */; };
+		8A25D8D12374284B0092063B /* PlayerRecentMatchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */; };
+		8A25D8D3237429090092063B /* PlayerWinLoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */; };
+		8A25D8D52374617A0092063B /* PlayerPlayHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D42374617A0092063B /* PlayerPlayHero.swift */; };
+		8A25D8D7237461AE0092063B /* TotalsActionsInGameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */; };
+		8A25D8D9237465250092063B /* HeroStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D8237465250092063B /* HeroStatsModel.swift */; };
+		8A25D8DC23746E030092063B /* AlamofireConstantsInfoServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8DB23746E030092063B /* AlamofireConstantsInfoServise.swift */; };
+		8A25D8DE2374726F0092063B /* PlayerDetailsApiServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8DD2374726F0092063B /* PlayerDetailsApiServise.swift */; };
+		8A25D8E12374729C0092063B /* ConstantsApiServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8E02374729C0092063B /* ConstantsApiServise.swift */; };
 		8A2F33232372C098009D271D /* SearchPlayerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F33222372C098009D271D /* SearchPlayerCoordinator.swift */; };
 		8A2F332D2372CED6009D271D /* PlayerDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F332C2372CED6009D271D /* PlayerDetailsCoordinator.swift */; };
 		8A2F332F2372CF90009D271D /* PlayerDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2F332E2372CF90009D271D /* PlayerDetailsViewModel.swift */; };
@@ -37,6 +48,7 @@
 		8A379E6E2371BA190017240A /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A379E6D2371BA190017240A /* TabBarCoordinator.swift */; };
 		8A379E702371BA520017240A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A379E6F2371BA520017240A /* Coordinator.swift */; };
 		8A3E8134237305B800D27FB7 /* SearchPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3E8133237305B800D27FB7 /* SearchPlayerViewModel.swift */; };
+		8A7DB435237400A7000D1FF8 /* PlayerDetailsServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7DB434237400A7000D1FF8 /* PlayerDetailsServise.swift */; };
 		8A8C2EA02366EC840043928D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2E9F2366EC840043928D /* AppDelegate.swift */; };
 		8A8C2EA42366EC840043928D /* FavoritePlayersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8C2EA32366EC840043928D /* FavoritePlayersVC.swift */; };
 		8A8C2EA92366EC850043928D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8C2EA82366EC850043928D /* Assets.xcassets */; };
@@ -60,13 +72,24 @@
 		8A0373492367084F00330540 /* AlamofireBaseRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireBaseRequestService.swift; sourceTree = "<group>"; };
 		8A03734B2367099400330540 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		8A03734D23671F5700330540 /* DotaApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaApiPath.swift; sourceTree = "<group>"; };
-		8A0373512367202800330540 /* AlamofirePlayerServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofirePlayerServise.swift; sourceTree = "<group>"; };
+		8A0373512367202800330540 /* AlamofireSearchPlayerServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSearchPlayerServise.swift; sourceTree = "<group>"; };
 		8A0373542367215000330540 /* BaseRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequestService.swift; sourceTree = "<group>"; };
 		8A037356236728C600330540 /* PlayerInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInfoModel.swift; sourceTree = "<group>"; };
 		8A03735823672AFA00330540 /* PlayerServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerServise.swift; sourceTree = "<group>"; };
 		8A03735C236826F700330540 /* PlayerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellViewModel.swift; sourceTree = "<group>"; };
 		8A03735F23683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionSearchPlayerVC(SearchBar).swift"; sourceTree = "<group>"; };
 		8A03736123683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionSearchPlayerVC(TableView).swift"; sourceTree = "<group>"; };
+		8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsHeroesModel.swift; sourceTree = "<group>"; };
+		8A25D8CC237426DB0092063B /* WordCloudModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCloudModel.swift; sourceTree = "<group>"; };
+		8A25D8CE237427740092063B /* CountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountsModel.swift; sourceTree = "<group>"; };
+		8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRecentMatchesModel.swift; sourceTree = "<group>"; };
+		8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWinLoseModel.swift; sourceTree = "<group>"; };
+		8A25D8D42374617A0092063B /* PlayerPlayHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlayHero.swift; sourceTree = "<group>"; };
+		8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsActionsInGameElement.swift; sourceTree = "<group>"; };
+		8A25D8D8237465250092063B /* HeroStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStatsModel.swift; sourceTree = "<group>"; };
+		8A25D8DB23746E030092063B /* AlamofireConstantsInfoServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireConstantsInfoServise.swift; sourceTree = "<group>"; };
+		8A25D8DD2374726F0092063B /* PlayerDetailsApiServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsApiServise.swift; sourceTree = "<group>"; };
+		8A25D8E02374729C0092063B /* ConstantsApiServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsApiServise.swift; sourceTree = "<group>"; };
 		8A2F33222372C098009D271D /* SearchPlayerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlayerCoordinator.swift; sourceTree = "<group>"; };
 		8A2F332C2372CED6009D271D /* PlayerDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsCoordinator.swift; sourceTree = "<group>"; };
 		8A2F332E2372CF90009D271D /* PlayerDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +110,7 @@
 		8A379E6D2371BA190017240A /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		8A379E6F2371BA520017240A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		8A3E8133237305B800D27FB7 /* SearchPlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPlayerViewModel.swift; sourceTree = "<group>"; };
+		8A7DB434237400A7000D1FF8 /* PlayerDetailsServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsServise.swift; sourceTree = "<group>"; };
 		8A8C2E9C2366EC840043928D /* Dota2Api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dota2Api.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8C2E9F2366EC840043928D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8C2EA32366EC840043928D /* FavoritePlayersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlayersVC.swift; sourceTree = "<group>"; };
@@ -148,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8A0373532367212E00330540 /* BaseRequest */,
+				8A25D8E3237472C30092063B /* DownloadConstants */,
 				8A03734B2367099400330540 /* NetworkHelper.swift */,
 				8AF6B940236859D900625F03 /* ResultsCode.swift */,
 				8A03734D23671F5700330540 /* DotaApiPath.swift */,
@@ -171,6 +196,39 @@
 				8A3766B5236C58C8002BDAAC /* PlayerCellTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		8A25D8DA237466C70092063B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A25D8D8237465250092063B /* HeroStatsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A25D8DF237472830092063B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A25D8DD2374726F0092063B /* PlayerDetailsApiServise.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8A25D8E2237472A60092063B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A25D8E02374729C0092063B /* ConstantsApiServise.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8A25D8E3237472C30092063B /* DownloadConstants */ = {
+			isa = PBXGroup;
+			children = (
+				8A25D8E2237472A60092063B /* Protocols */,
+				8A25D8DB23746E030092063B /* AlamofireConstantsInfoServise.swift */,
+			);
+			path = DownloadConstants;
 			sourceTree = "<group>";
 		};
 		8A2F33262372CDED009D271D /* Details */ = {
@@ -213,6 +271,13 @@
 		8A2F332A2372CE8C009D271D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */,
+				8A25D8CE237427740092063B /* CountsModel.swift */,
+				8A25D8CC237426DB0092063B /* WordCloudModel.swift */,
+				8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */,
+				8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */,
+				8A25D8D42374617A0092063B /* PlayerPlayHero.swift */,
+				8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +285,7 @@
 		8A2F332B2372CE95009D271D /* Servise */ = {
 			isa = PBXGroup;
 			children = (
+				8A7DB43623740108000D1FF8 /* Network */,
 			);
 			path = Servise;
 			sourceTree = "<group>";
@@ -236,7 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				8A03735823672AFA00330540 /* PlayerServise.swift */,
-				8A0373512367202800330540 /* AlamofirePlayerServise.swift */,
+				8A0373512367202800330540 /* AlamofireSearchPlayerServise.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -288,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				8A379E6F2371BA520017240A /* Coordinator.swift */,
-				8A379E60237041360017240A /* AppCoordinator.swift */,
 				8A379E6D2371BA190017240A /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -300,6 +365,15 @@
 				8AAC52392366F96C00CB2621 /* Matches.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8A7DB43623740108000D1FF8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8A25D8DF237472830092063B /* Protocols */,
+				8A7DB434237400A7000D1FF8 /* PlayerDetailsServise.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		8A8C2E932366EC840043928D = {
@@ -324,7 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				8AD314B0236B1C1400987A47 /* ApplicationFile */,
-				8AD314B2236B1C6500987A47 /* GlobalModule */,
+				8AD314B2236B1C6500987A47 /* Global */,
 				8AD314A9236B16D500987A47 /* Modules */,
 				8A8C2EB42366F0040043928D /* Resources */,
 				8AF6B94423687FAD00625F03 /* Common */,
@@ -444,6 +518,7 @@
 		8AD314B0236B1C1400987A47 /* ApplicationFile */ = {
 			isa = PBXGroup;
 			children = (
+				8A379E60237041360017240A /* AppCoordinator.swift */,
 				8A8C2E9F2366EC840043928D /* AppDelegate.swift */,
 			);
 			path = ApplicationFile;
@@ -459,14 +534,15 @@
 			path = Matches;
 			sourceTree = "<group>";
 		};
-		8AD314B2236B1C6500987A47 /* GlobalModule */ = {
+		8AD314B2236B1C6500987A47 /* Global */ = {
 			isa = PBXGroup;
 			children = (
 				8A379E6C2371BA000017240A /* Coordinator */,
 				8A037345236706BE00330540 /* Service */,
 				8AAC52342366F29A00CB2621 /* View */,
+				8A25D8DA237466C70092063B /* Model */,
 			);
-			path = GlobalModule;
+			path = Global;
 			sourceTree = "<group>";
 		};
 		8AD314B3236B1D1C00987A47 /* ScreenView */ = {
@@ -670,41 +746,53 @@
 			files = (
 				8A03735923672AFA00330540 /* PlayerServise.swift in Sources */,
 				8AD314B7236B1DD500987A47 /* ProfileModel..swift in Sources */,
+				8A25D8DC23746E030092063B /* AlamofireConstantsInfoServise.swift in Sources */,
 				8A379E61237041360017240A /* AppCoordinator.swift in Sources */,
 				8A3766AD236C4BEA002BDAAC /* FavoritePlayersViewModelType.swift in Sources */,
 				8A0373552367215000330540 /* BaseRequestService.swift in Sources */,
 				8A379E682371B96D0017240A /* FavoritePlayersCoordinator.swift in Sources */,
 				8A2F33232372C098009D271D /* SearchPlayerCoordinator.swift in Sources */,
+				8A25D8DE2374726F0092063B /* PlayerDetailsApiServise.swift in Sources */,
 				8A2FEAE7236C33CB00FF5D66 /* FavoritePlayersViewModel.swift in Sources */,
 				8A3E8134237305B800D27FB7 /* SearchPlayerViewModel.swift in Sources */,
+				8A25D8D12374284B0092063B /* PlayerRecentMatchesModel.swift in Sources */,
+				8A7DB435237400A7000D1FF8 /* PlayerDetailsServise.swift in Sources */,
 				8A2F33312372CFC4009D271D /* PlayerDetailsVC.swift in Sources */,
 				8AAC523E2366FAAB00CB2621 /* MatchesVC.swift in Sources */,
 				8AF6B941236859D900625F03 /* ResultsCode.swift in Sources */,
 				8A03734C2367099400330540 /* NetworkHelper.swift in Sources */,
+				8A25D8D3237429090092063B /* PlayerWinLoseModel.swift in Sources */,
 				8A379E702371BA520017240A /* Coordinator.swift in Sources */,
-				8A0373522367202800330540 /* AlamofirePlayerServise.swift in Sources */,
+				8A0373522367202800330540 /* AlamofireSearchPlayerServise.swift in Sources */,
 				8A2FEAE4236C335900FF5D66 /* PlayerTableViewModelType.swift in Sources */,
 				8A2F33332372D0A8009D271D /* PlayerDetailsViewModelType.swift in Sources */,
 				8A2FEADD236C2D1700FF5D66 /* RealmDataBaseServise.swift in Sources */,
 				8A03734A2367084F00330540 /* AlamofireBaseRequestService.swift in Sources */,
+				8A25D8D7237461AE0092063B /* TotalsActionsInGameElement.swift in Sources */,
 				8A8C2EA42366EC840043928D /* FavoritePlayersVC.swift in Sources */,
 				8A2F332D2372CED6009D271D /* PlayerDetailsCoordinator.swift in Sources */,
 				8A2FEAE2236C332500FF5D66 /* SearchPlayerViewModelType.swift in Sources */,
+				8A25D8E12374729C0092063B /* ConstantsApiServise.swift in Sources */,
 				8A2FEAE0236C330700FF5D66 /* PlayerCellViewModelType.swift in Sources */,
 				8A2FEAE9236C345C00FF5D66 /* ExtensionPlayersVC(TableView).swift in Sources */,
 				8AF6B94623687FEA00625F03 /* CustomImageView.swift in Sources */,
 				8A8C2EA02366EC840043928D /* AppDelegate.swift in Sources */,
+				8A25D8D52374617A0092063B /* PlayerPlayHero.swift in Sources */,
+				8A25D8CF237427740092063B /* CountsModel.swift in Sources */,
 				8A379E6E2371BA190017240A /* TabBarCoordinator.swift in Sources */,
 				8A03736023683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift in Sources */,
 				8AAC52402366FE1100CB2621 /* SearchPlayerVC.swift in Sources */,
 				8A037357236728C600330540 /* PlayerInfoModel.swift in Sources */,
 				8AF6B94323686F0100625F03 /* PlayerTableViewModel.swift in Sources */,
+				8A25D8D9237465250092063B /* HeroStatsModel.swift in Sources */,
 				8A03736223683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift in Sources */,
+				8A25D8CB2374265E0092063B /* RankingsHeroesModel.swift in Sources */,
 				8A03735D236826F700330540 /* PlayerCellViewModel.swift in Sources */,
 				8A8C2EB62366F1C00043928D /* R.generated.swift in Sources */,
 				8A03734E23671F5700330540 /* DotaApiPath.swift in Sources */,
 				8A3766B6236C58C8002BDAAC /* PlayerCellTableViewCell.swift in Sources */,
 				8A379E6A2371B9C40017240A /* MatchesCoordinator.swift in Sources */,
+				8A25D8CD237426DB0092063B /* WordCloudModel.swift in Sources */,
 				8A2F332F2372CF90009D271D /* PlayerDetailsViewModel.swift in Sources */,
 				8AD314B9236B338300987A47 /* DataBaseServise.swift in Sources */,
 			);
