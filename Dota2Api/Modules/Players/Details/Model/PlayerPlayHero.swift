@@ -9,9 +9,9 @@ import Foundation
 
 // MARK: - PlayerPlayHero
 struct PlayerPlayHero: Codable {
-    let heroID: String
-    let lastPlayed, games, win, withGames: Int
-    let withWin, againstGames, againstWin: Int
+    let heroID: String?
+    let lastPlayed, games, win, withGames: Int?
+    let withWin, againstGames, againstWin: Int?
 
     enum CodingKeys: String, CodingKey {
         case heroID = "hero_id"

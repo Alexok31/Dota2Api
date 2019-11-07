@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - TotalsActionsInGameElement
-struct TotalsActionsInGameElement: Codable {
-    let field: String
-    let n: Int
-    let sum: Double
+// MARK: - TotalsActionsInGame
+struct PlayerTotalActionInGame: Codable {
+    let field: String?
+    let n: Int?
+    let sum: Double?
 }
 
-typealias TotalsActionsInGame = [TotalsActionsInGameElement]
+typealias PlayerTotalsActionsInGame = [PlayerTotalActionInGame]

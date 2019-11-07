@@ -17,13 +17,13 @@
 		8A03735D236826F700330540 /* PlayerCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03735C236826F700330540 /* PlayerCellViewModel.swift */; };
 		8A03736023683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03735F23683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift */; };
 		8A03736223683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A03736123683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift */; };
-		8A25D8CB2374265E0092063B /* RankingsHeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */; };
-		8A25D8CD237426DB0092063B /* WordCloudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CC237426DB0092063B /* WordCloudModel.swift */; };
-		8A25D8CF237427740092063B /* CountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CE237427740092063B /* CountsModel.swift */; };
+		8A25D8CB2374265E0092063B /* PlayerRankingsHeroesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CA2374265E0092063B /* PlayerRankingsHeroesModel.swift */; };
+		8A25D8CD237426DB0092063B /* PlayerWordCloudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CC237426DB0092063B /* PlayerWordCloudModel.swift */; };
+		8A25D8CF237427740092063B /* PlayerCountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8CE237427740092063B /* PlayerCountsModel.swift */; };
 		8A25D8D12374284B0092063B /* PlayerRecentMatchesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */; };
 		8A25D8D3237429090092063B /* PlayerWinLoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */; };
 		8A25D8D52374617A0092063B /* PlayerPlayHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D42374617A0092063B /* PlayerPlayHero.swift */; };
-		8A25D8D7237461AE0092063B /* TotalsActionsInGameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */; };
+		8A25D8D7237461AE0092063B /* PlayerTotalActionInGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D6237461AE0092063B /* PlayerTotalActionInGame.swift */; };
 		8A25D8D9237465250092063B /* HeroStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8D8237465250092063B /* HeroStatsModel.swift */; };
 		8A25D8DC23746E030092063B /* AlamofireConstantsInfoServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8DB23746E030092063B /* AlamofireConstantsInfoServise.swift */; };
 		8A25D8DE2374726F0092063B /* PlayerDetailsApiServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A25D8DD2374726F0092063B /* PlayerDetailsApiServise.swift */; };
@@ -79,13 +79,13 @@
 		8A03735C236826F700330540 /* PlayerCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellViewModel.swift; sourceTree = "<group>"; };
 		8A03735F23683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionSearchPlayerVC(SearchBar).swift"; sourceTree = "<group>"; };
 		8A03736123683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionSearchPlayerVC(TableView).swift"; sourceTree = "<group>"; };
-		8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingsHeroesModel.swift; sourceTree = "<group>"; };
-		8A25D8CC237426DB0092063B /* WordCloudModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCloudModel.swift; sourceTree = "<group>"; };
-		8A25D8CE237427740092063B /* CountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountsModel.swift; sourceTree = "<group>"; };
+		8A25D8CA2374265E0092063B /* PlayerRankingsHeroesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRankingsHeroesModel.swift; sourceTree = "<group>"; };
+		8A25D8CC237426DB0092063B /* PlayerWordCloudModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWordCloudModel.swift; sourceTree = "<group>"; };
+		8A25D8CE237427740092063B /* PlayerCountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCountsModel.swift; sourceTree = "<group>"; };
 		8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerRecentMatchesModel.swift; sourceTree = "<group>"; };
 		8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerWinLoseModel.swift; sourceTree = "<group>"; };
 		8A25D8D42374617A0092063B /* PlayerPlayHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPlayHero.swift; sourceTree = "<group>"; };
-		8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalsActionsInGameElement.swift; sourceTree = "<group>"; };
+		8A25D8D6237461AE0092063B /* PlayerTotalActionInGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTotalActionInGame.swift; sourceTree = "<group>"; };
 		8A25D8D8237465250092063B /* HeroStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroStatsModel.swift; sourceTree = "<group>"; };
 		8A25D8DB23746E030092063B /* AlamofireConstantsInfoServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireConstantsInfoServise.swift; sourceTree = "<group>"; };
 		8A25D8DD2374726F0092063B /* PlayerDetailsApiServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsApiServise.swift; sourceTree = "<group>"; };
@@ -142,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42C6AADF2374A33A0027AF78 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8A379E6F2371BA520017240A /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		486B500039E6B985D6265BB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,13 +279,13 @@
 		8A2F332A2372CE8C009D271D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A25D8CA2374265E0092063B /* RankingsHeroesModel.swift */,
-				8A25D8CE237427740092063B /* CountsModel.swift */,
-				8A25D8CC237426DB0092063B /* WordCloudModel.swift */,
+				8A25D8CA2374265E0092063B /* PlayerRankingsHeroesModel.swift */,
+				8A25D8CE237427740092063B /* PlayerCountsModel.swift */,
+				8A25D8CC237426DB0092063B /* PlayerWordCloudModel.swift */,
 				8A25D8D02374284B0092063B /* PlayerRecentMatchesModel.swift */,
 				8A25D8D2237429090092063B /* PlayerWinLoseModel.swift */,
 				8A25D8D42374617A0092063B /* PlayerPlayHero.swift */,
-				8A25D8D6237461AE0092063B /* TotalsActionsInGameElement.swift */,
+				8A25D8D6237461AE0092063B /* PlayerTotalActionInGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,7 +361,7 @@
 		8A379E6C2371BA000017240A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				8A379E6F2371BA520017240A /* Coordinator.swift */,
+				42C6AADF2374A33A0027AF78 /* Protocols */,
 				8A379E6D2371BA190017240A /* TabBarCoordinator.swift */,
 			);
 			path = Coordinator;
@@ -768,7 +776,7 @@
 				8A2F33332372D0A8009D271D /* PlayerDetailsViewModelType.swift in Sources */,
 				8A2FEADD236C2D1700FF5D66 /* RealmDataBaseServise.swift in Sources */,
 				8A03734A2367084F00330540 /* AlamofireBaseRequestService.swift in Sources */,
-				8A25D8D7237461AE0092063B /* TotalsActionsInGameElement.swift in Sources */,
+				8A25D8D7237461AE0092063B /* PlayerTotalActionInGame.swift in Sources */,
 				8A8C2EA42366EC840043928D /* FavoritePlayersVC.swift in Sources */,
 				8A2F332D2372CED6009D271D /* PlayerDetailsCoordinator.swift in Sources */,
 				8A2FEAE2236C332500FF5D66 /* SearchPlayerViewModelType.swift in Sources */,
@@ -778,7 +786,7 @@
 				8AF6B94623687FEA00625F03 /* CustomImageView.swift in Sources */,
 				8A8C2EA02366EC840043928D /* AppDelegate.swift in Sources */,
 				8A25D8D52374617A0092063B /* PlayerPlayHero.swift in Sources */,
-				8A25D8CF237427740092063B /* CountsModel.swift in Sources */,
+				8A25D8CF237427740092063B /* PlayerCountsModel.swift in Sources */,
 				8A379E6E2371BA190017240A /* TabBarCoordinator.swift in Sources */,
 				8A03736023683D4500330540 /* ExtensionSearchPlayerVC(SearchBar).swift in Sources */,
 				8AAC52402366FE1100CB2621 /* SearchPlayerVC.swift in Sources */,
@@ -786,13 +794,13 @@
 				8AF6B94323686F0100625F03 /* PlayerTableViewModel.swift in Sources */,
 				8A25D8D9237465250092063B /* HeroStatsModel.swift in Sources */,
 				8A03736223683D8900330540 /* ExtensionSearchPlayerVC(TableView).swift in Sources */,
-				8A25D8CB2374265E0092063B /* RankingsHeroesModel.swift in Sources */,
+				8A25D8CB2374265E0092063B /* PlayerRankingsHeroesModel.swift in Sources */,
 				8A03735D236826F700330540 /* PlayerCellViewModel.swift in Sources */,
 				8A8C2EB62366F1C00043928D /* R.generated.swift in Sources */,
 				8A03734E23671F5700330540 /* DotaApiPath.swift in Sources */,
 				8A3766B6236C58C8002BDAAC /* PlayerCellTableViewCell.swift in Sources */,
 				8A379E6A2371B9C40017240A /* MatchesCoordinator.swift in Sources */,
-				8A25D8CD237426DB0092063B /* WordCloudModel.swift in Sources */,
+				8A25D8CD237426DB0092063B /* PlayerWordCloudModel.swift in Sources */,
 				8A2F332F2372CF90009D271D /* PlayerDetailsViewModel.swift in Sources */,
 				8AD314B9236B338300987A47 /* DataBaseServise.swift in Sources */,
 			);

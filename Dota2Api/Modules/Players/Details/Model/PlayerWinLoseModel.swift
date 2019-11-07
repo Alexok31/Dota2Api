@@ -8,5 +8,5 @@
 import Foundation
 
 struct PlayerWinLoseModel: Decodable {
-    let win, lose: Int
+    let win, lose: Int?
 }
