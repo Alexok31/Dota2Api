@@ -45,7 +45,7 @@ class PlayerTableViewModel: PlayerTableViewModelType {
     func addToFavorite() {
         guard let index = selectedIndexPath else {return}
         let profile = profiles[index.row]
-        dataBaseServise?.add(dataModel: profile)
+        dataBaseServise?.addSingle(dataModel: profile)
     }
     
     func removeFromFavorite() {

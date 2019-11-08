@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 
 protocol DataBaseServise {
-    func add<ModelType: Object>(dataModel: ModelType)
+    func addSingle<ModelType: Object>(dataModel: ModelType)
+    func addList<ModelType: Object>(dataModel: [ModelType])
     func remove<ModelType: Object>(dataModel: ModelType)
     func fetch<ModelType: Object>(modelType: ModelType.Type) -> Results<ModelType>
 }

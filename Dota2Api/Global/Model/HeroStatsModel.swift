@@ -5,18 +5,20 @@
 //  Created by EVA RUSH on 11/7/19.
 //
 
-import Foundation
+import Realm
+import RealmSwift
 
 // MARK: - HeroStatsModel
-struct HeroStatsModel: Codable {
-    let id: Int
-    let name, localizedName: String
-    let primaryAttr: PrimaryAttr
-    let attackType: AttackType
-    let roles: [Role]
-    let img, icon: String
+class HeroStatsModel: Object, Decodable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String? = nil
+    @objc dynamic var localizedName: String? = nil
+    @objc dynamic var primaryAttr: String? = nil
+    @objc dynamic var attackType: String? = nil
+    @objc dynamic var img: String? = nil
+    @objc dynamic var icon: String? = nil
     
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case localizedName = "localized_name"
@@ -24,29 +26,38 @@ struct HeroStatsModel: Codable {
         case attackType = "attack_type"
         case roles, img, icon
     }
-}
-
-enum AttackType: String, Codable {
-    case melee = "Melee"
-    case ranged = "Ranged"
-}
-
-enum PrimaryAttr: String, Codable {
-    case agi = "agi"
-    case int = "int"
-    case str = "str"
-}
-
-enum Role: String, Codable {
-    case carry = "Carry"
-    case disabler = "Disabler"
-    case durable = "Durable"
-    case escape = "Escape"
-    case initiator = "Initiator"
-    case jungler = "Jungler"
-    case nuker = "Nuker"
-    case pusher = "Pusher"
-    case support = "Support"
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        do {
+            id = try container.decode(Int.self, forKey: .id)
+        } catch {
+            id = 0
+        }
+        name = try? container.decode(String.self, forKey: .name)
+        localizedName = try? container.decode(String.self, forKey: .localizedName)
+        primaryAttr = try? container.decode(String.self, forKey: .primaryAttr)
+        attackType = try? container.decode(String.self, forKey: .attackType)
+        img = try? container.decode(String.self, forKey: .img)
+        icon = try? container.decode(String.self, forKey: .icon)
+        super.init()
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    required init() {
+        super.init()
+    }
+    
+    required init(value: Any, schema: RLMSchema) {
+        super.init(value: value, schema: schema)
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        super.init(realm: realm, schema: schema)
+    }
 }
 
 typealias HeroesStatsModel = [HeroStatsModel]
