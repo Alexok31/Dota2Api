@@ -8,7 +8,7 @@
 import Realm
 import RealmSwift
 
-class ProfileModel: Object, Decodable {
+class GetPlayerInfoModel: Object, Decodable {
     @objc dynamic var accountID: Int = 0
     @objc dynamic var personaname: String? = nil
     @objc dynamic var plus: Bool = false

@@ -16,6 +16,117 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
   
+  /// This `R.image` struct is generated, and contains static references to 15 images.
+  struct image {
+    /// Image `rank_icon_1`.
+    static let rank_icon_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_1")
+    /// Image `rank_icon_2`.
+    static let rank_icon_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_2")
+    /// Image `rank_icon_3`.
+    static let rank_icon_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_3")
+    /// Image `rank_icon_4`.
+    static let rank_icon_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_4")
+    /// Image `rank_icon_5`.
+    static let rank_icon_5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_5")
+    /// Image `rank_icon_6`.
+    static let rank_icon_6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_6")
+    /// Image `rank_icon_7`.
+    static let rank_icon_7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_7")
+    /// Image `rank_icon_8`.
+    static let rank_icon_8 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_icon_8")
+    /// Image `rank_star_1`.
+    static let rank_star_1 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_1")
+    /// Image `rank_star_2`.
+    static let rank_star_2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_2")
+    /// Image `rank_star_3`.
+    static let rank_star_3 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_3")
+    /// Image `rank_star_4`.
+    static let rank_star_4 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_4")
+    /// Image `rank_star_5`.
+    static let rank_star_5 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_5")
+    /// Image `rank_star_6`.
+    static let rank_star_6 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_6")
+    /// Image `rank_star_7`.
+    static let rank_star_7 = Rswift.ImageResource(bundle: R.hostingBundle, name: "rank_star_7")
+    
+    /// `UIImage(named: "rank_icon_1", bundle: ..., traitCollection: ...)`
+    static func rank_icon_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_2", bundle: ..., traitCollection: ...)`
+    static func rank_icon_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_2, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_3", bundle: ..., traitCollection: ...)`
+    static func rank_icon_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_3, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_4", bundle: ..., traitCollection: ...)`
+    static func rank_icon_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_4, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_5", bundle: ..., traitCollection: ...)`
+    static func rank_icon_5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_5, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_6", bundle: ..., traitCollection: ...)`
+    static func rank_icon_6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_6, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_7", bundle: ..., traitCollection: ...)`
+    static func rank_icon_7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_7, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_icon_8", bundle: ..., traitCollection: ...)`
+    static func rank_icon_8(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_icon_8, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_1", bundle: ..., traitCollection: ...)`
+    static func rank_star_1(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_1, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_2", bundle: ..., traitCollection: ...)`
+    static func rank_star_2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_2, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_3", bundle: ..., traitCollection: ...)`
+    static func rank_star_3(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_3, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_4", bundle: ..., traitCollection: ...)`
+    static func rank_star_4(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_4, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_5", bundle: ..., traitCollection: ...)`
+    static func rank_star_5(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_5, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_6", bundle: ..., traitCollection: ...)`
+    static func rank_star_6(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_6, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "rank_star_7", bundle: ..., traitCollection: ...)`
+    static func rank_star_7(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rank_star_7, compatibleWith: traitCollection)
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
     /// Nib `PlayerCellTableViewCell`.

@@ -11,7 +11,7 @@ import RxSwift
 
 class PlayerTableViewModel: PlayerTableViewModelType {
     
-    private var profiles : [ProfileModel]
+    private var players : [GetPlayerInfoModel]
     private var selectedIndexPath: IndexPath?
     
     var dataBaseServise : DataBaseServise?
@@ -19,17 +19,17 @@ class PlayerTableViewModel: PlayerTableViewModelType {
     //event
     let didOpenPlayerDetails = PublishSubject<Void>()
     
-    init(profiles : [ProfileModel]?) {
-        self.profiles = profiles ?? [ProfileModel]()
+    init(profiles : [GetPlayerInfoModel]?) {
+        self.players = profiles ?? [GetPlayerInfoModel]()
         dataBaseServise = RealmDataBaseServise()
     }
     
     var numberOfRows : Int {
-        return profiles.count
+        return players.count
     }
     
     func profileCell(for indexPath: IndexPath) -> PlayerCellViewModelType {
-        let profile = profiles[indexPath.row]
+        let profile = players[indexPath.row]
         return PlayerCellViewModel(searchPlayerModel: profile)
     }
     
@@ -39,18 +39,19 @@ class PlayerTableViewModel: PlayerTableViewModelType {
     
     func playerDetails() -> PlayerDetailsViewModelType? {
         guard let index = selectedIndexPath else { return nil }
-        return PlayerDetailsViewModel(playerId: profiles[index.row].accountID)
+        let player = players[index.row]
+        return PlayerDetailsViewModel(playerInfo: player)
     }
     
     func addToFavorite() {
         guard let index = selectedIndexPath else {return}
-        let profile = profiles[index.row]
+        let profile = players[index.row]
         dataBaseServise?.addSingle(dataModel: profile)
     }
     
     func removeFromFavorite() {
         guard let index = selectedIndexPath else {return}
-        let profile = profiles[index.row]
+        let profile = players[index.row]
         dataBaseServise?.remove(dataModel: profile)
     }
     

@@ -12,6 +12,6 @@ import RxSwift
 protocol SearchPlayerViewModelType {
     func selectSegment(at index : Int)
     func getPlayersInfo(searchText: String)
-    var observableProfiles: BehaviorRelay<[ProfileModel]> {get set}
+    var observableProfiles: BehaviorRelay<[GetPlayerInfoModel]> {get set}
     var didClouseSearch : PublishSubject<Void> {get}
 }

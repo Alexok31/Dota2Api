@@ -9,5 +9,5 @@ import Foundation
 import Alamofire
 
 protocol SearchPlayerApiServise {
-    func byUserName(_ name: String, completion: @escaping (_ result: ResultsCode, _ players: [ProfileModel]?) -> ())
+    func byUserName(_ name: String, completion: @escaping (_ result: ResultsCode, _ players: [GetPlayerInfoModel]?) -> ())
 }

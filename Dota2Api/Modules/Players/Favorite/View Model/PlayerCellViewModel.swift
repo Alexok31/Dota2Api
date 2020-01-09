@@ -9,9 +9,9 @@ import Foundation
 
 class PlayerCellViewModel : PlayerCellViewModelType {
     
-    private var searchPlayerModel : ProfileModel
+    private var searchPlayerModel : GetPlayerInfoModel
     
-    init(searchPlayerModel : ProfileModel) {
+    init(searchPlayerModel : GetPlayerInfoModel) {
         self.searchPlayerModel = searchPlayerModel
     }
     

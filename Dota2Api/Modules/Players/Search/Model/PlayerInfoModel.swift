@@ -9,7 +9,7 @@ struct PlayerInfo: Decodable {
     let trackedUntil: String?
     let rankTier, soloCompetitiveRank, competitiveRank: Int?
     let leaderboardRank : Int?
-    let profile: ProfileModel?
+    let profile: GetPlayerInfoModel?
 
     enum CodingKeys: String, CodingKey {
         case trackedUntil = "tracked_until"

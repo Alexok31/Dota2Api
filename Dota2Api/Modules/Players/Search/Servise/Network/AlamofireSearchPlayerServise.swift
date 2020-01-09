@@ -42,9 +42,9 @@ class AlamofireSearchPlayerServise: SearchPlayerApiServise {
         }
     }
     
-    func byUserName(_ name: String, completion: @escaping (_ result: ResultsCode, _ players: [ProfileModel]?) -> ()) {
+    func byUserName(_ name: String, completion: @escaping (_ result: ResultsCode, _ players: [GetPlayerInfoModel]?) -> ()) {
         let path = Path.searchUserName(name)
-        baseRequestService.getDataModel(path, model: [ProfileModel].self) { (result, players) in
+        baseRequestService.getDataModel(path, model: [GetPlayerInfoModel].self) { (result, players) in
             completion(result, players)
         }
     }

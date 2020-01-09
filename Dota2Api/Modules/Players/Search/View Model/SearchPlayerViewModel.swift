@@ -13,10 +13,10 @@ class SearchPlayerViewModel: SearchPlayerViewModelType {
     
     private let searchPlayerServise : SearchPlayerApiServise
     private let playerDetails: PlayerDetailsApiServise
-    private var searchPlayer = [ProfileModel]()
+    private var searchPlayer = [GetPlayerInfoModel]()
     private var selectSegmentIndex : SearchByType
     
-    var observableProfiles: BehaviorRelay<[ProfileModel]>
+    var observableProfiles: BehaviorRelay<[GetPlayerInfoModel]>
     
     //event
     var didClouseSearch = PublishSubject<Void>()

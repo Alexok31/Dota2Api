@@ -10,7 +10,7 @@ import RealmSwift
 import RxSwift
 
 protocol FavoritePlayersViewModelType {
-    var profiles: Results<ProfileModel> {get}
+    var profiles: Results<GetPlayerInfoModel> {get}
     var didAddFavorite: PublishSubject<Void> {get}
     var didUpdateFavoritePlayers: PublishSubject<Void> {get}
     func playerTableViewModel() -> PlayerTableViewModelType

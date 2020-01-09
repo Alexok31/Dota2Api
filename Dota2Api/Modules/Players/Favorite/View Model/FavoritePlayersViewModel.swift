@@ -13,7 +13,7 @@ class FavoritePlayersViewModel: FavoritePlayersViewModelType {
     
     private var dataBaseServise : DataBaseServise
     
-    var profiles: Results<ProfileModel>
+    var profiles: Results<GetPlayerInfoModel>
     let disposeBag = DisposeBag()
     
     //events
@@ -22,7 +22,7 @@ class FavoritePlayersViewModel: FavoritePlayersViewModelType {
     
     init() {
         dataBaseServise = RealmDataBaseServise()
-        profiles = dataBaseServise.fetch(modelType: ProfileModel.self)
+        profiles = dataBaseServise.fetch(modelType: GetPlayerInfoModel.self)
     }
     
     func playerTableViewModel() -> PlayerTableViewModelType {
